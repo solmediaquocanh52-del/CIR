@@ -16,6 +16,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install Build Dependencies (ldid, dpkg, xz)
+        run: |
+          brew install ldid dpkg xz
+
       - name: Install Theos & Patched iOS SDKs
         run: |
           export THEOS="$HOME/theos"
