@@ -30,14 +30,14 @@ jobs:
       - name: Build Rootless Package (iOS 15 - 16.3.1+)
         run: |
           export THEOS="$HOME/theos"
-          make clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          make clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless TARGET=iphone:clang::14.0
           mkdir -p dist/rootless
           cp packages/*.deb dist/rootless/
 
       - name: Build Rootful Package (iOS 14)
         run: |
           export THEOS="$HOME/theos"
-          make clean package FINALPACKAGE=1
+          make clean package FINALPACKAGE=1 TARGET=iphone:clang::14.0
           mkdir -p dist/rootful
           cp packages/*.deb dist/rootful/
 
