@@ -26,18 +26,20 @@ jobs:
           git clone --recursive --depth=1 https://github.com/theos/theos.git "$THEOS"
           mkdir -p "$THEOS/sdks"
           curl -sL https://github.com/theos/sdks/archive/master.tar.gz | tar -xz -C "$THEOS/sdks" --strip-components=1
+          SDK_VER=$(ls "$THEOS/sdks" | grep -E '^iPhoneOS[0-9]+\.[0-9]+\.sdk$' | sed -E 's/^iPhoneOS([0-9]+\.[0-9]+)\.sdk$/\1/' | sort -V | tail -n 1)
+          echo "PATCHED_SDK=$SDK_VER" >> $GITHUB_ENV
 
       - name: Build Rootless Package (iOS 15 - 16.3.1+)
         run: |
           export THEOS="$HOME/theos"
-          make clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless TARGET=iphone:clang::14.0
+          make clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless TARGET="iphone:clang:${PATCHED_SDK}:14.0"
           mkdir -p dist/rootless
           cp packages/*.deb dist/rootless/
 
       - name: Build Rootful Package (iOS 14)
         run: |
           export THEOS="$HOME/theos"
-          make clean package FINALPACKAGE=1 TARGET=iphone:clang::14.0
+          make clean package FINALPACKAGE=1 TARGET="iphone:clang:${PATCHED_SDK}:14.0"
           mkdir -p dist/rootful
           cp packages/*.deb dist/rootful/
 
