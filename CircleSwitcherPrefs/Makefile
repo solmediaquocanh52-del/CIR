@@ -10,6 +10,9 @@ CircleSwitcherPrefs_FRAMEWORKS = UIKit QuartzCore CoreGraphics
 CircleSwitcherPrefs_PRIVATE_FRAMEWORKS = Preferences
 CircleSwitcherPrefs_INSTALL_PATH = /Library/PreferenceBundles
 
+# Thêm đường dẫn trỏ trực tiếp đến PrivateFrameworks của SDK hiện tại
+CircleSwitcherPrefs_LDFLAGS += -F$(THEOS)/include -F$(THEOS)/lib -F$(SYSROOT)/System/Library/PrivateFrameworks
+
 include $(THEOS_MAKE_PATH)/bundle.mk
 
 internal-stage::
