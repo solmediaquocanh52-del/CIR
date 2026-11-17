@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSTableCell</string>
+			<key>cellClass</key>
+			<string>CSCircleSwitcherLogoCell</string>
+			<key>height</key>
+			<integer>68</integer>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>General</string>
+			<key>footerText</key>
+			<string>Drag the 3D preview above to test card curvature in real time.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>key</key>
+			<string>enabled</string>
+			<key>label</key>
+			<string>Enable CircleSwitcher</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>key</key>
+			<string>hapticFeedback</string>
+			<key>label</key>
+			<string>Center Snap Haptics</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>One-Tap Presets</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>applyLiquidCirclePreset:</string>
+			<key>label</key>
+			<string>Preset: Liquid Circle 3D (Default)</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>applyCoverFlowPreset:</string>
+			<key>label</key>
+			<string>Preset: Classic 3D CoverFlow</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>applyMinimalDeckPreset:</string>
+			<key>label</key>
+			<string>Preset: Minimal Card Deck</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>3D Layout &amp; Circular Geometry</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<integer>0</integer>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>validTitles</key>
+			<array>
+				<string>Circle Wheel 3D (Default)</string>
+				<string>3D Cards</string>
+				<string>Card Deck</string>
+				<string>CoverFlow</string>
+				<string>Inverse CoverFlow</string>
+				<string>Subtler CoverFlow</string>
+				<string>2D Cards (Classic Flat)</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+				<integer>5</integer>
+				<integer>6</integer>
+			</array>
+			<key>key</key>
+			<string>layoutMode</string>
+			<key>label</key>
+			<string>Switcher Mode</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>key</key>
+			<string>circleMorph</string>
+			<key>label</key>
+			<string>Circular Card Morph</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>110.0</real>
+			<key>min</key>
+			<real>24.0</real>
+			<key>max</key>
+			<real>185.0</real>
+			<key>showValue</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>key</key>
+			<string>circleRadius</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>1.0</real>
+			<key>min</key>
+			<real>0.35</real>
+			<key>max</key>
+			<real>1.85</real>
+			<key>showValue</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>key</key>
+			<string>wheelCurvature</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>0.88</real>
+			<key>min</key>
+			<real>0.65</real>
+			<key>max</key>
+			<real>1.02</real>
+			<key>showValue</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>key</key>
+			<string>cardScale</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Liquid Glass &amp; Glow</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>key</key>
+			<string>liquidGlass</string>
+			<key>label</key>
+			<string>Liquid Glass Rim &amp; Glow</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<integer>0</integer>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>validTitles</key>
+			<array>
+				<string>Ice Cyan</string>
+				<string>Royal Blue</string>
+				<string>Nebula Violet</string>
+				<string>Emerald Mint</string>
+				<string>Pure Specular White</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+			</array>
+			<key>key</key>
+			<string>glowColorIndex</string>
+			<key>label</key>
+			<string>Glow Accent Color</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>0.45</real>
+			<key>min</key>
+			<real>0.0</real>
+			<key>max</key>
+			<real>1.0</real>
+			<key>showValue</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>key</key>
+			<string>glowIntensity</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Icon Animations</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>key</key>
+			<string>fadeIcons</string>
+			<key>label</key>
+			<string>Fade Icons</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>key</key>
+			<string>scaleIcons</string>
+			<key>label</key>
+			<string>Scale Icons</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.vn.circleswitcher</string>
+			<key>key</key>
+			<string>rollIcons</string>
+			<key>label</key>
+			<string>Roll Icons</string>
+			<key>PostNotification</key>
+			<string>com.vn.circleswitcher/ReloadPrefs</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>System &amp; Credits</string>
+			<key>footerText</key>
+			<string>CircleSwitcher v2.0.0 — Supports iOS 14.0 to iOS 16.3.1+ (Rootless &amp; Rootful). Preference architecture modernized from CoolStar's 3D Switcher 2.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>respring:</string>
+			<key>icon</key>
+			<string>respring.png</string>
+			<key>label</key>
+			<string>Respring SpringBoard</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>CircleSwitcher</string>
+</dict>
+</plist>
